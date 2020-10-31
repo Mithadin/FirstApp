@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   constructor(private empDataService: EmpdataService) {}
   ngOnInit() {
-    this.empdatadetails = this.empDataService.getter();
+    this.empdatadetails = this.empDataService.get();
   }
 
   changeName(e: Employee) {

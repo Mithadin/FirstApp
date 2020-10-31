@@ -28,7 +28,7 @@ export class EmpdataService {
     }
   ];
   constructor() {}
-  getter(): Employee[] {
+  get(): Employee[] {
     return this.empObjArray;
   }
 }
