@@ -3,4 +3,5 @@ export interface Employee {
   empDesig: string;
   empAge?: number;
   empSex?: string;
+  empSal?: number;
 }
