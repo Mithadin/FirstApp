@@ -1,9 +1,10 @@
-<div class="card" (click)="callMe(el)" *ngFor="let el of data">
+<div class="card" *ngFor="let el of data; let i = index">
   <img src="img_avatar.png" alt="Avatar" style="width:100%" />
   <div class="container">
-    <h4>
+    <h4 (click)="callMe(el)">
       <b>{{ el.empName }},{{ el.empAge }}</b>
     </h4>
     <p>{{ el.empDesig }},{{ el.empSex }}</p>
+    <button (click)="removeData(i)">X</button>
   </div>
 </div>

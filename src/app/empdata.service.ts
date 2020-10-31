@@ -28,7 +28,20 @@ export class EmpdataService {
     }
   ];
   constructor() {}
+
+  addEmp(name: string, age: number, gender: string) {
+    this.empObjArray.push({
+      empName: name,
+      empAge: age,
+      empSex: gender
+    });
+  }
+
   get(): Employee[] {
     return this.empObjArray;
+  }
+
+  removeEmp(position: number) {
+    this.empObjArray.splice(position, 1);
   }
 }

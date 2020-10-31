@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmpdataService } from '../empdata.service';
 
 @Component({
   selector: 'app-form',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  constructor() {}
+  constructor(private empdataService: EmpdataService) {}
 
   ngOnInit(): void {}
   onSubmitDetails(name: string, age: number, gender: string) {
-    console.log(name, age, gender);
+    this.empdataService.addEmp(name, age, gender);
   }
 }
