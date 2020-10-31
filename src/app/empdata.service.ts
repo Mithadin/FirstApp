@@ -5,7 +5,7 @@ import { Employee } from './models/employee.model';
   providedIn: 'root'
 })
 export class EmpdataService {
-  private empObjArray: Employee[] = [
+  public empObjArray: Employee[] = [
     {
       empName: 'Mith',
       empDesig: 'UI Devloper',
