@@ -1,9 +1,17 @@
-<app-form></app-form>
 <h1>{{ title }}</h1>
 <h1>{{ deisignation }}</h1>
-<app-card [data]="empdatadetails" (nameChange)="changeName($event)"></app-card><br />
 
-<div style="text-align:center">
-    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
-        [title]="chartOptions.title"></apx-chart>
-</div>
+
+<mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Form">
+        <app-form></app-form>
+    </mat-tab>
+
+    <mat-tab label="Card">
+        <app-card [data]="empdatadetails" (nameChange)="changeName($event)"></app-card><br />
+    </mat-tab>
+
+    <mat-tab label="Chart">
+        <app-charts></app-charts>
+    </mat-tab>
+</mat-tab-group>

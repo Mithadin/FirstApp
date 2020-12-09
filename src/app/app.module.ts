@@ -10,12 +10,14 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { ChartsComponent } from './charts/charts.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [AppComponent, CardComponent, FormComponent, ChartsComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgApexchartsModule, BrowserAnimationsModule, MatSliderModule],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgApexchartsModule,
+    BrowserAnimationsModule, MatSliderModule, MatTabsModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
