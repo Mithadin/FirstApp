@@ -9,9 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, FormComponent],
+  declarations: [AppComponent, CardComponent, FormComponent, ChartsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgApexchartsModule, BrowserAnimationsModule, MatSliderModule],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
