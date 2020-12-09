@@ -1,5 +1,5 @@
-<div class="card" *ngFor="let el of data; let i = index">
-  <img src="img_avatar.png" alt="Avatar" style="width:100%" />
+<!-- <div class="card" *ngFor="let el of data; let i = index">
+  <img src="img_avatar.png" alt="Avatar" />
   <div class="container">
     <h4 (click)="callMe(el)">
       <b>{{ el.empName }},{{ el.empAge }}</b>
@@ -7,4 +7,19 @@
     <p>{{ el.empDesig }},{{ el.empSex }}</p>
     <button (click)="removeData(i)">X</button>
   </div>
-</div>
+</div> -->
+
+
+<mat-card class="card" *ngFor="let el of data; let i = index">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Avatar"
+      style="width: 150px;">
+    <h4 (click)="callMe(el)">
+      <mat-card-title>{{ el.empName }},{{ el.empAge }}</mat-card-title>
+    </h4>
+    <mat-card-subtitle>{{ el.empDesig }},{{ el.empSex }}</mat-card-subtitle>
+  </mat-card-header><br />
+  <button (click)="removeData(i)">X</button>
+
+</mat-card>

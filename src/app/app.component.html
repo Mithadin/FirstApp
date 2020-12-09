@@ -1,5 +1,9 @@
 <app-form></app-form>
 <h1>{{ title }}</h1>
 <h1>{{ deisignation }}</h1>
-<app-card [data]="empdatadetails" (nameChange)="changeName($event)"></app-card
-><br />
+<app-card [data]="empdatadetails" (nameChange)="changeName($event)"></app-card><br />
+
+<div style="text-align:center">
+    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+        [title]="chartOptions.title"></apx-chart>
+</div>
